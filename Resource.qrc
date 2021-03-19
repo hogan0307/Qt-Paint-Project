@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resource/background.png</file>
+        <file>Resource/circle.png</file>
+        <file>Resource/exit.png</file>
+        <file>Resource/fileclose.png</file>
+        <file>Resource/filenew.png</file>
+        <file>Resource/fileopen.png</file>
+        <file>Resource/filesave.png</file>
+        <file>Resource/icon.png</file>
+        <file>Resource/line.png</file>
+        <file>Resource/ok.png</file>
+        <file>Resource/rectangle.png</file>
+        <file>Resource/redo.png</file>
+        <file>Resource/slideclose.png</file>
+        <file>Resource/slidenew.png</file>
+        <file>Resource/triangle.png</file>
+        <file>Resource/undo.png</file>
+        <file>Resource/background1.png</file>
+        <file>Resource/colorbutton.png</file>
+        <file>Resource/gallery.png</file>
+        <file>Resource/text.png</file>
+        <file>Resource/myappico.ico</file>
+    </qresource>
+</RCC>

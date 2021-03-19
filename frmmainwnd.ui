@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmMainWnd</class>
+ <widget class="QMainWindow" name="frmMainWnd">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>597</width>
+    <height>326</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>frmMainWnd</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Resource.qrc">
+    <normaloff>:/Resource/icon.png</normaloff>:/Resource/icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QStackedWidget" name="DocumentArea">
+      <widget class="QWidget" name="page"/>
+     </widget>
+    </item>
+    <item>
+     <widget class="QUndoView" name="undoView"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>597</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionExportImage"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuShape">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="NewSlideAction"/>
+    <addaction name="RemoveSlideAction"/>
+    <addaction name="separator"/>
+    <addaction name="actionAddCircle"/>
+    <addaction name="actionAddRectangle"/>
+    <addaction name="actionAddTriangle"/>
+    <addaction name="actionAddLine"/>
+    <addaction name="actionRemoveShape"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="HelpAction"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="SlideViewAction"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuShape"/>
+   <addaction name="menuView"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionExportImage"/>
+   <addaction name="actionClose"/>
+   <addaction name="separator"/>
+   <addaction name="NewSlideAction"/>
+   <addaction name="RemoveSlideAction"/>
+   <addaction name="separator"/>
+   <addaction name="actionAddCircle"/>
+   <addaction name="actionAddRectangle"/>
+   <addaction name="actionAddTriangle"/>
+   <addaction name="actionAddLine"/>
+   <addaction name="actionRemoveShape"/>
+   <addaction name="separator"/>
+   <addaction name="actionText"/>
+   <addaction name="actionColor"/>
+  </widget>
+  <widget class="QDockWidget" name="SlideDock">
+   <property name="minimumSize">
+    <size>
+     <width>300</width>
+     <height>129</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>300</width>
+     <height>524287</height>
+    </size>
+   </property>
+   <property name="statusTip">
+    <string/>
+   </property>
+   <property name="windowTitle">
+    <string>Slides</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <layout class="QFormLayout" name="formLayout"/>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="tbl_Slide"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="Resource.qrc">
+     <normaloff>:/Resource/filenew.png</normaloff>:/Resource/filenew.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="Resource.qrc">
+     <normaloff>:/Resource/fileopen.png</normaloff>:/Resource/fileopen.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="Resource.qrc">
+     <normaloff>:/Resource/filesave.png</normaloff>:/Resource/filesave.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset resource="Resource.qrc">
+     <normaloff>:/Resource/exit.png</normaloff>:/Resource/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="actionAddCircle">
+   <property name="icon">
+    <iconset resource="Resource.qrc">
+     <normaloff>:/Resource/circle.png</normaloff>:/Resource/circle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Circle</string>
+   </property>
+  </action>
+  <action name="actionAddRectangle">
+   <property name="icon">
+    <iconset resource="Resource.qrc">
+     <normaloff>:/Resource/rectangle.png</normaloff>:/Resource/rectangle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Rectangle</string>
+   </property>
+  </action>
+  <action name="actionAddTriangle">
+   <property name="icon">
+    <iconset resource="Resource.qrc">
+     <normaloff>:/Resource/triangle.png</normaloff>:/Resource/triangle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Triangle</string>
+   </property>
+  </action>
+  <action name="actionAddLine">
+   <property name="icon">
+    <iconset resource="Resource.qrc">
+     <normaloff>:/Resource/line.png</normaloff>:/Resource/line.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Line</string>
+   </property>
+  </action>
+  <action name="actionRemoveShape">
+   <property name="icon">
+    <iconset resource="Resource.qrc">
+     <normaloff>:/Resource/slideclose.png</normaloff>:/Resource/slideclose.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remove Shape</string>
+   </property>
+  </action>
+  <action name="HelpAction">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="SlideViewAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Slide</string>
+   </property>
+  </action>
+  <action name="NewSlideAction">
+   <property name="icon">
+    <iconset resource="Resource.qrc">
+     <normaloff>:/Resource/slidenew.png</normaloff>:/Resource/slidenew.png</iconset>
+   </property>
+   <property name="text">
+    <string>New Slide</string>
+   </property>
+  </action>
+  <action name="RemoveSlideAction">
+   <property name="icon">
+    <iconset resource="Resource.qrc">
+     <normaloff>:/Resource/fileclose.png</normaloff>:/Resource/fileclose.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remove Slide</string>
+   </property>
+  </action>
+  <action name="actionColor">
+   <property name="icon">
+    <iconset resource="Resource.qrc">
+     <normaloff>:/Resource/colorbutton.png</normaloff>:/Resource/colorbutton.png</iconset>
+   </property>
+   <property name="text">
+    <string>Color</string>
+   </property>
+  </action>
+  <action name="actionExportImage">
+   <property name="icon">
+    <iconset resource="Resource.qrc">
+     <normaloff>:/Resource/gallery.png</normaloff>:/Resource/gallery.png</iconset>
+   </property>
+   <property name="text">
+    <string>Export Image</string>
+   </property>
+  </action>
+  <action name="actionText">
+   <property name="icon">
+    <iconset resource="Resource.qrc">
+     <normaloff>:/Resource/text.png</normaloff>:/Resource/text.png</iconset>
+   </property>
+   <property name="text">
+    <string>Text</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="Resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
